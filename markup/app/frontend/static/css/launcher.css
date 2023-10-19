@@ -1,0 +1,63 @@
+body {
+    font-size: 28pt;
+    background-color: rgb(43, 87, 154);
+    position: relative;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+#top_left {
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+
+#top_left img {
+    width: 40px;
+    height: 40px;
+}
+
+button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+}
+
+button#minimize {
+    top: 0;
+    right: 40px;
+    padding-bottom: 10px;
+}
+
+button#close {
+    top: 0;
+    right: 0;
+}
+
+button#minimize:hover, button#close:hover {
+    opacity: 0.8;
+}
+
+#launcher {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+#center {
+    text-align: center;
+}
+
+#bottom_left {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    font-size: 15px;
+}

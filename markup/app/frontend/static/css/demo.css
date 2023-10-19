@@ -1,0 +1,124 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #333;
+	background-color: #fbfbfb;
+	height: 100%;
+}
+
+#loading img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -16px;
+	margin-left: -16px;
+	width: 100px;
+	height: 100px;
+}
+
+textarea {
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+	font-size: 12px;
+	resize: none;
+}
+
+.other-demos {
+	margin-left: 3em;
+}
+
+.containers {
+	display: flex;
+	height: calc(100vh - 68px);
+}
+
+.container {
+	flex-basis: 50%;
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.pane, .inputPane {
+	margin-top: 5px;
+	padding: 0.6em;
+	border: 1px solid #ccc;
+	overflow: auto;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
+#preview {
+	display: flex;
+}
+
+#preview iframe {
+	flex-grow: 1;
+}
+
+#main {
+	display: none;
+}
+
+.error {
+	border-color: red;
+	background-color: #FEE
+}
+
+.loadingError {
+	background-color: #fee;
+	font-weight: bold;
+	color: #f00;
+	text-align: center;
+	padding: 10px;
+}
+
+#responseTime {
+    display: inline-block;
+}
+
+blockquote {
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 4px solid #ccc;
+  background-color: #f1f1f1;
+  line-height: 1.5;
+  max-height: 200px;
+  overflow: auto;
+}
+
+pre {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	border: 1px solid black;
+	padding: 8px;
+	text-align: left;
+}
+
+th {
+	background-color: #f2f2f2;
+}

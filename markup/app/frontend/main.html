@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Marked Demo</title>
+    <link rel="stylesheet" href="static/css/demo.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/dialog.css" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;,">
+  </head>
+  <body>
+    <div id="loading">
+      <img src="static/images/loading_256.gif" alt="Loading">
+    </div>
+    <!-- 遮罩层 -->
+    <div id="overlay" class="overlay"></div>
+    <!-- 弹出窗口 -->
+    <div id="popup" class="popup">
+    <!-- 弹出窗口的内容 -->
+    </div>
+    <div id="main">
+      <div class="containers">
+        <div class="container">
+          <div class="label">
+            <span>Input</span> ·
+            <select id="inputType">
+              <option value="markdown">Markdown</option>
+              <option value="options">Options</option>
+            </select>
+          </div>
+          <textarea id="markdown" class="inputPane"></textarea>
+          <textarea id="options" class="inputPane" placeholder="Options (as JSON)"></textarea>
+        </div>
+        <div class="container">
+          <div class="label">
+            <select id="outputType">
+              <option value="preview">Preview</option>
+              <option value="html">HTML Source</option>
+              <option value="lexer">Lexer Data</option>
+              <option value="quickref">Quick Reference</option>
+            </select> ·
+            Response Time:
+            <span id="responseTime"></span>
+          </div>
+          <div id="preview" class="pane">
+            <noscript>
+              <h2>You'll need to enable Javascript to use this tool.</h2>
+            </noscript>
+            <iframe src="static/other/preview.html" frameborder="0" sandbox="allow-same-origin allow-top-navigation-by-user-activation"></iframe>
+          </div>
+          <textarea id="html" class="pane" readonly="readonly"></textarea>
+          <textarea id="lexer" class="pane" readonly="readonly"></textarea>
+          <textarea id="quickref" class="pane" readonly="readonly"></textarea>
+        </div>
+      </div>
+    </div>
+    <script src="static/js/demo.js" type="module"></script>
+    <script src="static/js/dialog.js" type="module"></script>
+  </body>
+</html>
