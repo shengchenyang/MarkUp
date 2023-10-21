@@ -1,4 +1,7 @@
+from pathlib import Path
 from typing import Literal
+
+import toml
 
 from markup import __version__
 
@@ -21,3 +24,13 @@ class JsAndHtmlGen:
         _close_popup = cls.gen_close_popup()
         normal = """<h2>还未开发，敬请期待。。。</h2>"""
         return _close_popup
+
+
+class ReadConf:
+    @staticmethod
+    def get_launcher_conf(file_path):
+        conf = toml.load(Path(file_path))
+        return (
+            conf["create_window"]["launcher_width"],
+            conf["create_window"]["launcher_width"],
+        )

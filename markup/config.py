@@ -15,5 +15,7 @@ class Config:
     ROOT_DIR = CONFIG_DIR.parent
     COMMON_DIR = CONFIG_DIR / "common"
     VIT_DIR = CONFIG_DIR / "VIT"
+    PROFILE_DIR = CONFIG_DIR / "profiles"
+    APP_PROFILE_DIR = PROFILE_DIR / "app.ini"
 
     FileInfo: FileInfo = None
