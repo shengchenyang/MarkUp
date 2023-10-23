@@ -23,9 +23,7 @@ class EncryptOperation:
         return hl.hexdigest()
 
     @classmethod
-    def base64_encode(
-        cls, encode_data: Union[bytes, str], url_safe: bool = False
-    ) -> str:
+    def base64_encode(cls, encode_data: Union[bytes, str], url_safe: bool = False) -> str:
         """base64 编码
 
         Args:

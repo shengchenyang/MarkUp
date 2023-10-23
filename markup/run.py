@@ -4,16 +4,17 @@ from markup.common.temp import ReadConf
 from markup.config import Config, webview
 
 api = Api()
-min_size = ReadConf.get_launcher_conf(Config.APP_PROFILE_DIR)
+min_size = ReadConf.get_launcher_conf(Config.PROFILE_DIR / "app.ini")
+
 window = webview.create_window(
     "Untitled* - MarkUp",
-    "app/frontend/main.html",
+    f"{Config.app_path}/app/frontend/main.html",
     width=min_size[0],
     height=min_size[1],
     min_size=(800, 600),
     js_api=api,
 )
-menu_items = create_menu(window)
+menu_items = create_menu()
 webview.start(
     menu=menu_items,
     # debug=True,
