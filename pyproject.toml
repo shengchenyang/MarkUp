@@ -23,6 +23,15 @@ PyInstaller = [
 flake8 = "6.1.0"
 pre-commit = "3.4.0"
 
+[[tool.poetry.source]]
+name = "aliyun"
+url = "https://mirrors.aliyun.com/pypi/simple"
+priority = "default"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
 [tool.black]
 line-length = 120
 
