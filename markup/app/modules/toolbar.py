@@ -43,8 +43,8 @@ def create_menu() -> list:
         wm.Menu(
             "页面",
             [
-                wm.MenuAction("前进", MainMenu.backward_page),
-                wm.MenuAction("后退", MainMenu.forward_page),
+                wm.MenuAction("前进", MainMenu.forward_page),
+                wm.MenuAction("后退", MainMenu.backward_page),
             ],
         ),
         wm.Menu(
