@@ -69,7 +69,6 @@ class MainMenu:
                 for file in file_tuple:
                     file_content = Path(file).read_text(encoding="utf-8")
                     file_name = Path(file).name
-                    print("新文件：", file)
                     content_encoded = EncryptOperation.base64_encode(file_content)
                     js_code = f"const file_content=decodeBase64(`{content_encoded}`);$markdownElem.value = file_content;const event = new Event('change');$markdownElem.dispatchEvent(event);"
                     active_w.evaluate_js(js_code, callback=None)
@@ -150,12 +149,14 @@ class MainMenu:
     @staticmethod
     def forward_page():
         if active_w := webview.active_window():
-            active_w.evaluate_js("history.back();")
+            forward_code = "history.forward();" if Config.IS_WINDOWS else "history.back();"
+            active_w.evaluate_js(forward_code)
 
     @staticmethod
     def backward_page():
         if active_w := webview.active_window():
-            active_w.evaluate_js("history.forward();")
+            backward_code = "history.back();" if Config.IS_WINDOWS else "history.forward();"
+            active_w.evaluate_js(backward_code)
 
     @staticmethod
     def help_about():
