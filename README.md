@@ -6,8 +6,6 @@ Markdown Parser Software.
 此项目的目的是介绍使用 `python` 快速开发 `GUI` 的方法；
 不使用 `pyqt`, `pyside` 之类的工具，而是使用 `pywebview` 开发和转化已有 `web` 项目来达到高效的目的。
 
-本项目及文档等部分内容目前为开荒阶段，虽然已经跑通主要功能，但还不完善，我将不断完善中。
-
 > 目前只放出运行示例图，后面会放上 `windows`, `macos`, `linux` 平台的包。
 
 windows 中运行图：
